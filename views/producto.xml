@@ -13,18 +13,13 @@
         <field name="model">producto</field>
         <field name="arch" type="xml">
             <form string="">
-                <sheet>
-                    <!--<field name="imagen" widget="image" class="oe_avatar"/>-->
-                    <group>
-                        <field name="portatil" />
-                        <field name="precio" />
-                        <field name="estado" />
-                        <field name="SO" />
-                        <field name="fechaSubida" />
-                        <field name="vendedor" />
-                        <field name="venta" />
-                    </group>
-                </sheet>
+                <field name="portatil" />
+                <field name="precio" />
+                <field name="estado" />
+                <field name="SO" />
+                <field name="fechaSubida" />
+                <field name="vendedor" />
+                <field name="venta" />
             </form>
         </field>
     </record>

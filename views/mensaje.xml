@@ -1,42 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="chat_action" model="ir.actions.act_window">
-        <field name="name">chat</field>
+    <record id="mensaje_action" model="ir.actions.act_window">
+        <field name="name">mensaje</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">chat</field>
+        <field name="res_model">mensaje</field>
         <field name="view_mode">tree,form</field>
     </record>
     
-    <record id="chat_view_form" model="ir.ui.view">
-        <field name="name">chat</field>
-        <field name="model">chat</field>
+    <record id="mensaje_view_form" model="ir.ui.view">
+        <field name="name">mensaje</field>
+        <field name="model">mensaje</field>
         <field name="arch" type="xml">
-            <form string="chat">
-                <sheet>
-                    <group string="Datos básicos">
-                        <group string="Necesario">
-                            <field name="comprador" />
-                            <field name="vendedor" />
-                            <field name="texto" />
-                            <field name="fecga" />
-                            <field name="chat" />
-                            <field name="usuario" />
-                        </group>
-                    </group>
-                </sheet>
+            <form string="mensaje">
+                <field name="comprador" />
+                <field name="vendedor" />
+                <field name="texto" />
+                <field name="fecha" />
+                <field name="chat" />
+                <field name="usuario" />
             </form>
         </field>
     </record>
 
-    <record id="chat_view_tree" model="ir.ui.view">
-        <field name="name">chat</field>
-        <field name="model">chat</field>
+    <record id="mensaje_view_tree" model="ir.ui.view">
+        <field name="name">mensaje</field>
+        <field name="model">mensaje</field>
         <field name="arch" type="xml">
-            <tree string="chat">
+            <tree string="mensaje">
                 <field name="comprador" />
                 <field name="vendedor" />
                 <field name="texto" />
-                <field name="fecga" />
+                <field name="fecha" />
                 <field name="chat" />
                 <field name="usuario" />
             </tree>

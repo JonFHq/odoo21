@@ -12,15 +12,9 @@
         <field name="model">chat</field>
         <field name="arch" type="xml">
             <form string="chat">
-                <sheet>
-                    <group string="Datos básicos">
-                        <group string="Necesario">
-                            <field name="comprador" />
-                            <field name="vendedor" />
-                            <field name="mensaje" />
-                        </group>
-                    </group>
-                </sheet>
+                <field name="comprador" />
+                <field name="vendedor" />
+                <field name="mensajes" />
             </form>
         </field>
     </record>
@@ -30,9 +24,9 @@
         <field name="model">chat</field>
         <field name="arch" type="xml">
             <tree string="chat">
-                <field name="comprado" />
+                <field name="comprador" />
                 <field name="vendedor" />
-                <field name="mensaje" />
+                <field name="mensajes" />
             </tree>
         </field>
     </record>

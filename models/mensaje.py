@@ -1,10 +1,10 @@
-from odoo import models, fields, api
+from odoo import _, api, fields, models
 
-class chat(models.Model):
+class Mensaje(models.Model):
 
-    _name = "chat"
-    _rec_name = "nombre"
-    _description = "chat"
+    _name = 'mensaje'
+    _rec_name = 'texto'
+    _description = 'mensaje'
 
     comprador = fields.Char(string="comprador", required=True)
     vendedor = fields.Char(string="vendedor", required=True)

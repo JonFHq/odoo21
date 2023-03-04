@@ -13,12 +13,7 @@
         <field name="model">marcas</field>
         <field name="arch" type="xml">
             <form string="">
-                <sheet>
-                    <!--<field name="imagen" widget="image" class="oe_avatar"/>-->
-                    <group>
-                        <field name="nombre" />
-                    </group>
-                </sheet>
+                <field name="nombre" />
             </form>
         </field>
     </record>

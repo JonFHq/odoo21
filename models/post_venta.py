@@ -1,10 +1,10 @@
 from odoo import models, fields, api
 
-class postVenta(models.Model):
+class post_venta(models.Model):
 
-    _name = "postVenta"
-    _rec_name = "nombre"
-    _description = "postVenta"
+    _name = 'post_venta'
+    _rec_name = 'venta'
+    _description = 'post_venta'
 
     comprador = fields.Char(string="comprador", required=True)
     vendedor = fields.Char(string="vendedor", required=True)

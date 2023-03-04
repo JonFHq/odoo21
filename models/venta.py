@@ -15,7 +15,7 @@ class venta(models.Model):
     @api.depends('comprador', 'vendedor', 'producto', 'fecha_venta', 'precio')
     def _dependecias(self):
         for record in self:
-            record.nombre = str(record.comprador.nombre) + ' compro el producto ' + str(record.producto.nombre) + ' de ' + str(record.vendedor.nombre) + ' por ' + str(record.precio) + '€' + ' el dia ' + str(record.fecha_venta)
+            record.nombre = str(record.comprador.nombre) + ' compro el producto ' + str(record.producto.portatil) + ' de ' + str(record.vendedor.nombre) + ' por ' + str(record.precio) + '€' + ' el dia ' + str(record.fecha_venta)
    
     @api.onchange('vendedor')
     def _onchange_vendedor(self):
