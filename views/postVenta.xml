@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="postVenta_action" model="ir.actions.act_window">
+        <field name="name">postVenta</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">postVenta</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <record id="postVenta_view_form" model="ir.ui.view">
+        <field name="name">postVenta</field>
+        <field name="model">postVenta</field>
+        <field name="arch" type="xml">
+            <form string="postVenta">
+                <sheet>
+                    <group string="Datos básicos">
+                        <group string="Necesario">
+                            <field name="comprador" />
+                            <field name="vendedor" />
+                            <field name="puntuacionDada" />
+                            <field name="mensaje" />
+                            <field name="venta"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="postVenta_view_tree" model="ir.ui.view">
+        <field name="name">postVenta</field>
+        <field name="model">postVenta</field>
+        <field name="arch" type="xml">
+            <tree string="postVenta">
+                <field name="comprado" />
+                <field name="vendedor" />
+                <field name="puntuacionDada" />
+                <field name="mensaje" />
+                <field name="venta"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

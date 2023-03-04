@@ -9,6 +9,4 @@
 
         <menuitem id="transacciones_menu_act" name="venta" parent="prueba_menu_root" action="venta_action"/>
 
-        <menuitem id="portatil_menu_act" name="producto" parent="prueba_menu_root" action="producto_action"/>
-
 </odoo>

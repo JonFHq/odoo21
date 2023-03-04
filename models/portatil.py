@@ -36,5 +36,3 @@ class portatil(models.Model):
     marca = fields.Boolean(string="marca", required=True)
     
     productos = fields.One2many('producto', 'portatil')
-    
-    
