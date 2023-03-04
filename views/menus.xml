@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <menuitem id="prueba_menu_root" name="RecuOdoo"/>
+
+        <menuitem id="usuario_menu_act" name="usuario" parent="prueba_menu_root" action="usuario_action"/>
+
+        <menuitem id="producto_menu_act" name="producto" parent="prueba_menu_root" action="producto_action"/>
+
+        <menuitem id="transacciones_menu_act" name="venta" parent="prueba_menu_root" action="venta_action"/>
+
+        <menuitem id="portatil_menu_act" name="producto" parent="prueba_menu_root" action="producto_action"/>
+
+</odoo>
