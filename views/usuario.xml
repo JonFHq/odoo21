@@ -32,6 +32,9 @@
                     <group string="Compras">
                         <field name="compras" />
                     </group>
+                    <group>
+                        <field name="chats" />
+                    </group>
                 </sheet>
             </form>
         </field>

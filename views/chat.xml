@@ -12,9 +12,10 @@
         <field name="model">chat</field>
         <field name="arch" type="xml">
             <form string="chat">
-                <field name="comprador" />
-                <field name="vendedor" />
-                <field name="mensajes" />
+                <group>
+                    <field name="usuarios" />
+                    <field name="mensajes" />
+                </group>
             </form>
         </field>
     </record>
@@ -24,8 +25,7 @@
         <field name="model">chat</field>
         <field name="arch" type="xml">
             <tree string="chat">
-                <field name="comprador" />
-                <field name="vendedor" />
+                <field name="usuarios" />
                 <field name="mensajes" />
             </tree>
         </field>

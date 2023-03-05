@@ -8,7 +8,7 @@ class venta(models.Model):
     nombre = fields.Char(string="Registro", compute='_dependecias')
     comprador = fields.Many2one('usuario', required=True)
     vendedor = fields.Many2one('usuario', required=True)
-    producto = fields.Reference('producto', 'venta')
+    producto = fields.Many2one('producto', string='Producto', unique=True)
     precio = fields.Integer(string='Precio', required=True)
     fecha_venta = fields.Date(string="Fecha de venta", required=True)
     

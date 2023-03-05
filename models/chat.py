@@ -5,6 +5,5 @@ class Chat(models.Model):
     _name = "chat"
     _description = "chat"
 
-    comprador = fields.Char(string='comprador', required=True)
-    vendedor = fields.Char(string='vendedor', required=True)
-    mensajes = fields.One2many('mensaje', 'chat', string='mensajes')
+    usuarios = fields.Many2many('usuario', string='Usuarios')
+    mensajes = fields.One2many('mensaje', 'chat', string='Mensajes')

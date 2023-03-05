@@ -11,7 +11,7 @@
 
         <menuitem id="envio_menu_act" name="envio" parent="prueba_menu_root" action="envio_action"/>
 
-        <!-- <menuitem id="marcas_menu_act" name="marcas" parent="prueba_menu_root" action="marcas_action"/> -->
+        <menuitem id="marca_menu_act" name="marca" parent="prueba_menu_root" action="marca_action"/>
 
         <menuitem id="mensaje_menu_act" name="mensaje" parent="prueba_menu_root" action="mensaje_action"/>
 

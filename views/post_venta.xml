@@ -12,11 +12,15 @@
         <field name="model">post_venta</field>
         <field name="arch" type="xml">
             <form string="post_venta">
-                <field name="comprador" />
-                <field name="vendedor" />
-                <field name="puntuacionDada" />
-                <field name="mensaje" />
-                <field name="venta"/>
+                <form>
+                    <group>
+                        <field name="comprador" />
+                        <field name="vendedor" />
+                        <field name="puntuacionDada" />
+                        <field name="mensaje" />
+                        <field name="venta"/>
+                    </group>
+                </form>
             </form>
         </field>
     </record>

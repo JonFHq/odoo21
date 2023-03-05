@@ -21,6 +21,7 @@
     'data': [
         'views/chat.xml',
         'views/envio.xml',
+        'views/marca.xml',
         'views/mensaje.xml',
         'views/portatil.xml',
         'views/post_venta.xml',

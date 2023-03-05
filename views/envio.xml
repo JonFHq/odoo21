@@ -13,11 +13,13 @@
         <field name="model">envio</field>
         <field name="arch" type="xml">
             <form string="">
-                <field name="venta" />
-                <field name="origen" />
-                <field name="destino" />
-                <field name="estado" />
-                <field name="compañia" />
+                <group>
+                    <field name="venta" />
+                    <field name="origen" />
+                    <field name="destino" />
+                    <field name="estado" />
+                    <field name="compañia" />
+                </group>
             </form>
         </field>
     </record>
