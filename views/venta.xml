@@ -37,7 +37,11 @@
         <field name="model">venta</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="nombre" />
+                <field name="comprador" />
+                <field name="producto" />
+                <field name="vendedor" />
+                <field name="precio" />
+                <field name="fecha_venta" />
             </tree>
         </field>
     </record>

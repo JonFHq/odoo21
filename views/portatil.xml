@@ -13,39 +13,36 @@
         <field name="model">portatil</field>
         <field name="arch" type="xml">
             <form string="">
-                <sheet>
-                    <!--<field name="imagen" widget="image" class="oe_avatar"/>-->
-                    <group>
-                        <field name="modelo" />
-                        <field name="imagen" />
-                        <field name="resolucion" />
-                        <field name="frecuencia" />
-                        <field name="tamaño" />
-                        <field name="peso" />
-                        <field name="RAM" />
-                        <field name="HDD" />
-                        <field name="SSD" />
-                        <field name="grafica" />
-                        <field name="USB3" />
-                        <field name="USB2" />
-                        <field name="placa_base" />
-                        <field name="lector_discos" />
-                        <field name="tactil" />
-                        <field name="tablet" />
-                        <field name="wifi" />
-                        <field name="cable_red" />
-                        <field name="bluetooth" />
-                        <field name="HDMI" />
-                        <field name="VGA" />
-                        <field name="DPORT" />
-                        <field name="miniDPORT" />
-                        <field name="thunderbolt" />
-                        <field name="jack" />
-                        <field name="SIM" />
-                        <field name="cantidad" />
-                        <field name="marca" />
-                    </group>
-                </sheet>
+                <group>
+                    <field name="modelo" />
+                    <field name="marca" />
+                    <field name="imagen" />
+                    <field name="resolucion" />
+                    <field name="frecuencia" />
+                    <field name="tamaño" />
+                    <field name="peso" />
+                    <field name="RAM" />
+                    <field name="HDD" />
+                    <field name="SSD" />
+                    <field name="grafica" />
+                    <field name="USB3" />
+                    <field name="USB2" />
+                    <field name="placa_base" />
+                    <field name="lector_discos" />
+                    <field name="tactil" />
+                    <field name="tablet" />
+                    <field name="wifi" />
+                    <field name="cable_red" />
+                    <field name="bluetooth" />
+                    <field name="HDMI" />
+                    <field name="VGA" />
+                    <field name="DPORT" />
+                    <field name="miniDPORT" />
+                    <field name="thunderbolt" />
+                    <field name="jack" />
+                    <field name="SIM" />
+                    <field name="cantidad" />
+                </group>
             </form>
         </field>
     </record>
@@ -56,6 +53,7 @@
         <field name="arch" type="xml">
             <tree string="">
                 <field name="modelo" />
+                <field name="marca" />
                 <field name="imagen" />
                 <field name="resolucion" />
                 <field name="frecuencia" />
@@ -82,7 +80,6 @@
                 <field name="jack" />
                 <field name="SIM" />
                 <field name="cantidad" />
-                <field name="marca" />
             </tree>
         </field>
     </record>

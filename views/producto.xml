@@ -13,18 +13,15 @@
         <field name="model">producto</field>
         <field name="arch" type="xml">
             <form string="">
-                <sheet>
-                    <!--<field name="imagen" widget="image" class="oe_avatar"/>-->
-                    <group>
-                        <field name="portatil" />
-                        <field name="precio" />
-                        <field name="estado" />
-                        <field name="SO" />
-                        <field name="fechaSubida" />
-                        <field name="vendedor" />
-                        <field name="venta" />
-                    </group>
-                </sheet>
+                <group>
+                    <field name="portatil" />
+                    <field name="precio" />
+                    <field name="estado" />
+                    <field name="SO" />
+                    <field name="fechaSubida" />
+                    <field name="vendedor" />
+                    <field name="venta" />
+                </group>
             </form>
         </field>
     </record>
@@ -34,7 +31,7 @@
         <field name="model">producto</field>
         <field name="arch" type="xml">
             <tree string="">
-                <field name="portatil" />
+                <!-- <field name="portatil" /> -->
                 <field name="precio" />
                 <field name="estado" />
                 <field name="SO" />

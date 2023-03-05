@@ -5,15 +5,16 @@ class usuario(models.Model):
     _rec_name = "nombre"
     _description = "usuario"
 
-    dni = fields.Char(string="DNI", size=9, required=True)
-    nombre = fields.Char(string="Nombre", required=True)
+    dni = fields.Char(string='DNI', size=9, required=True)
+    nombre = fields.Char(string='Nombre', required=True)
     imagen = fields.Image()
-    telefono = fields.Integer(string="Número de telefono", size=9, required=True)
-    email = fields.Char(string="Correo", required=True) 
-    producto = fields.One2many("producto", "vendedor", string="producto a la venta")
-    venta = fields.One2many("venta", "vendedor", string="venta")
-    vendedor = fields.Boolean(string="Vendedor", compute='_vendedor')
-    compras = fields.One2many("venta", "comprador", string="Compras")
+    telefono = fields.Char(string='Número de telefono', size=9, required=True)
+    email = fields.Char(string='Correo', required=True) 
+    producto = fields.One2many('producto', 'vendedor', string='producto a la venta')
+    venta = fields.One2many('venta', 'vendedor', string='ventas')
+    vendedor = fields.Boolean(string='Vendedor', compute='_vendedor')
+    compras = fields.One2many('venta', 'comprador', string='Compras')
+    chats = fields.Many2many('chat', string='Chats')
     
     @api.depends('producto')
     def _vendedor(self):

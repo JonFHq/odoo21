@@ -1,15 +1,13 @@
-from odoo import models, fields, api
+from odoo import _, api, fields, models
+from odoo.exceptions import *
 
-class chat(models.Model):
+class Mensaje(models.Model):
 
-    _name = "chat"
-    _rec_name = "nombre"
-    _description = "chat"
+    _name = 'mensaje'
+    _rec_name = 'texto'
+    _description = 'mensaje'
 
-    comprador = fields.Char(string="comprador", required=True)
-    vendedor = fields.Char(string="vendedor", required=True)
-    texto = fields.Char(string="texto", required=True)
-    fecha = fields.Date(string="fecha", required=True)
-    chat = fields.Char(string="chat", required=True)
-    usuario = fields.Char(string="usuario", required=True)
-    
+    texto = fields.Char(string="Texto", required=True)
+    fecha = fields.Datetime(string="Fecha y hora", required=True)
+    chat = fields.Many2one('chat', string='Chat', required=True)
+    usuario = fields.Many2one('usuario', string='Usuario', required=True, domain="[('chats', 'in', chat)]")

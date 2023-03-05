@@ -8,14 +8,14 @@ class venta(models.Model):
     nombre = fields.Char(string="Registro", compute='_dependecias')
     comprador = fields.Many2one('usuario', required=True)
     vendedor = fields.Many2one('usuario', required=True)
-    producto = fields.Reference('producto', 'venta')
+    producto = fields.Many2one('producto', string='Producto', unique=True)
     precio = fields.Integer(string='Precio', required=True)
     fecha_venta = fields.Date(string="Fecha de venta", required=True)
     
     @api.depends('comprador', 'vendedor', 'producto', 'fecha_venta', 'precio')
     def _dependecias(self):
         for record in self:
-            record.nombre = str(record.comprador.nombre) + ' compro el producto ' + str(record.producto.nombre) + ' de ' + str(record.vendedor.nombre) + ' por ' + str(record.precio) + '€' + ' el dia ' + str(record.fecha_venta)
+            record.nombre = str(record.comprador.nombre) + ' compro el producto ' + str(record.producto.portatil) + ' de ' + str(record.vendedor.nombre) + ' por ' + str(record.precio) + '€' + ' el dia ' + str(record.fecha_venta)
    
     @api.onchange('vendedor')
     def _onchange_vendedor(self):
