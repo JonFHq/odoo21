@@ -13,6 +13,7 @@ class usuario(models.Model):
     producto = fields.One2many('producto', 'vendedor', string='producto a la venta')
     venta = fields.One2many('venta', 'vendedor', string='ventas')
     vendedor = fields.Boolean(string='Vendedor', compute='_vendedor')
+    reviews = fields.One2many('post_venta', 'vendedor', string='Reviews')
     compras = fields.One2many('venta', 'comprador', string='Compras')
     chats = fields.Many2many('chat', string='Chats')
     

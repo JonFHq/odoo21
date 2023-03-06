@@ -8,9 +8,39 @@ class venta(models.Model):
     nombre = fields.Char(string="Registro", compute='_dependecias')
     comprador = fields.Many2one('usuario', required=True)
     vendedor = fields.Many2one('usuario', required=True)
-    producto = fields.Many2one('producto', string='Producto', unique=True)
     precio = fields.Integer(string='Precio', required=True)
     fecha_venta = fields.Date(string="Fecha de venta", required=True)
+    review = fields.Many2one('post_venta', compute='compute_ventas_review', inverse='ventas_review_inverse', string='Review', store=True)
+    ventas_review = fields.One2many('post_venta', 'venta')
+    producto = fields.Many2one('producto', compute='compute_ventas_producto', inverse='ventas_producto_inverse', string='Producto', unique=True, required=True)
+    ventas_producto = fields.One2many('producto', 'venta')
+
+    @api.depends('ventas_review')
+    def compute_ventas_review(self):
+        if len(self.ventas_review) > 0:
+            self.review = self.ventas_review[0]
+
+    def ventas_review_inverse(self):
+        if len(self.ventas_review) > 0:
+            # delete previous reference
+            stage = self.env['post_venta'].browse(self.ventas_review[0].id)
+            asset.venta = False
+        # set new reference
+        self.review.venta = self
+
+    
+    @api.depends('ventas_producto')
+    def compute_ventas_producto(self):
+        if len(self.ventas_producto) > 0:
+            self.producto = self.ventas_producto[0]
+
+    def ventas_producto_inverse(self):
+        if len(self.ventas_producto) > 0:
+            # delete previous reference
+            stage = self.env['producto'].browse(self.ventas_producto[0].id)
+            asset.venta = False
+        # set new reference
+        self.producto.venta = self
     
     @api.depends('comprador', 'vendedor', 'producto', 'fecha_venta', 'precio')
     def _dependecias(self):

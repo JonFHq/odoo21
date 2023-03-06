@@ -27,6 +27,9 @@
                         <field name="precio" />
                         <field name="fecha_venta" />
                     </group>
+                    <group name="Review">
+                        <field name="review" />
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -42,6 +45,7 @@
                 <field name="vendedor" />
                 <field name="precio" />
                 <field name="fecha_venta" />
+                <field name="review" />
             </tree>
         </field>
     </record>
