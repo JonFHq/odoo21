@@ -29,3 +29,4 @@ class post_venta(models.Model):
     def _onchange_venta(self):
         if self.venta:
             self.vendedor = self.venta[0].vendedor
+

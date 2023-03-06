@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "laurita23",
-    'summary': """Laurita odoo21""",
+    'name': "recu2",
+    'summary': """recu2""",
     'description': """Odoo module to buy 2nd hand laptops:""",
-    'author': "Laurita23",
-    'website': "https://github.com/JonFHq/odoo21",
+    'author': "recu2",
+    'website': "https://github.com/SalesianosZaragoza/recuperacion-odoo-jonfeddan.git",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml

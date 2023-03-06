@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     
-    <menuitem id="prueba_menu_root" name="Laurita23"/>
+    <menuitem id="prueba_menu_root" name="Recu2"/>
 
         <menuitem id="usuario_menu_act" name="usuario" parent="prueba_menu_root" action="usuario_action"/>
 
