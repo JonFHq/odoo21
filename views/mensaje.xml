@@ -27,10 +27,9 @@
         <field name="model">mensaje</field>
         <field name="arch" type="xml">
             <tree string="mensaje">
+                <field name="usuario" />
                 <field name="texto" />
                 <field name="fecha" />
-                <field name="chat" />
-                <field name="usuario" />
             </tree>
         </field>
     </record>

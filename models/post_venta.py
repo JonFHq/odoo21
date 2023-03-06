@@ -8,7 +8,7 @@ class post_venta(models.Model):
 
     puntuacionDada = fields.Integer(string="Puntuación (1 - 5)", required=True)
     vendedor = fields.Many2one('usuario', string='Vendedor', readonly=True, required=True)
-    mensaje = fields.Char(string="mensaje", required=True)
+    mensaje = fields.Char(string="mensaje")
     venta = fields.Many2one('venta', string='Venta', required=True)
 
     @api.onchange('puntuacionDada')

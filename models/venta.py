@@ -15,6 +15,11 @@ class venta(models.Model):
     producto = fields.Many2one('producto', compute='compute_ventas_producto', inverse='ventas_producto_inverse', string='Producto', unique=True, required=True)
     ventas_producto = fields.One2many('producto', 'venta')
 
+    @api.onchange('producto')
+    def _onchange_producto(self):
+        if self.producto:
+            self.vendedor = self.producto.vendedor
+
     @api.depends('ventas_review')
     def compute_ventas_review(self):
         if len(self.ventas_review) > 0:
@@ -53,11 +58,29 @@ class venta(models.Model):
             if self.vendedor:
                 if self.vendedor.vendedor == False:
                     raise ValueError("El usuario no es vendedor")
+                else:
+                    self.producto = self.vendedor.productos[0]
         except:
             return {
                 'warning': {
                     'title': "Error",
                     'message': "El usuario no es vendedor",
+                }
+            }
+        
+    @api.onchange('producto')
+    def _onchange_producto(self):
+        try:
+            if self.producto:
+                if self.producto.venta:
+                    raise ValueError("El producto ya ha sido vendido")
+                else:
+                    self.vendedor = self.producto.vendedor
+        except:
+            return {
+                'warning': {
+                    'title': "Error",
+                    'message': "El producto ya ha sido vendido",
                 }
             }
 
@@ -76,7 +99,7 @@ class venta(models.Model):
             }
 
     @api.onchange('producto', 'vendedor')
-    def _onchange_producto(self):
+    def _onchange_producto_vendedor(self):
         try:
             if self.producto and self.vendedor:
                 if self.producto.vendedor != self.vendedor:

@@ -34,6 +34,7 @@
                     </group>
                     <group>
                         <field name="chats" />
+                        <field name="reviews"/>
                     </group>
                 </sheet>
             </form>

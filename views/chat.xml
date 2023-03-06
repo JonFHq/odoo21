@@ -14,7 +14,6 @@
             <form string="chat">
                 <group>
                     <field name="usuarios" />
-                    <field name="mensajes" />
                 </group>
             </form>
         </field>
@@ -25,8 +24,7 @@
         <field name="model">chat</field>
         <field name="arch" type="xml">
             <tree string="chat">
-                <field name="usuarios" />
-                <field name="mensajes" />
+                <field name="name" />
             </tree>
         </field>
     </record>
